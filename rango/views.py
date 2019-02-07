@@ -10,7 +10,7 @@ def add_category(request):
 			category = form.save(commit=True)
 			print(category, category.slug)
 			return index(request)
-		else:
+
 			print(form.errors)
 	return render(request, 'rango/add_category.html', {'form': form})
 def add_page(request, category_name_slug):
@@ -54,7 +54,7 @@ def index(request):
 def about(request):
 	# Construct a dictionary to pass to the template engine as its context.
 	# Note the key boldmessage is the same as {{ boldmessage }} in the template!
-	context_dict = {'Anas': "This tutorial has been put together by Anas Yahya"}
+	context_dict = {'Ahmad': "This tutorial has been put together by Ahmad Sawi"}
 	# Return a rendered response to send to the client.
 	# We make use of the shortcut function to make our lives easier.
 	# Note that the first parameter is the template we wish to use.
